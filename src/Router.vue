@@ -2,9 +2,6 @@
 
 </template>
 
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-
 <script>
 // import Home from './components/Home';
 // import About from './components/About';
@@ -16,10 +13,10 @@ const Work = require('./components/Work');
 const Journey = require('./components/Journey');
 
 const routes = [
-    { path: '/home', component: Home },
-    { path: '/about', component: About },
-    { path: '/work', component: Work },
-    { path: '/journey', component: Journey }
+    { path: '/home', name: "Home", component: Home },
+    { path: '/about', name: "About", component: About },
+    { path: '/work', name: "Work", component: Work },
+    { path: '/journey', name: "Journey", component: Journey }
 ]
 const router = new VueRouter({
     routes

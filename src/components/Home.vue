@@ -3,7 +3,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <div id="homePage">
-        <img class="homePageImg parallax-window" src="http://i67.tinypic.com/4uymbs.jpg" alt="">
+        <!-- <img class="homePageImg parallax-window" src="http://i67.tinypic.com/4uymbs.jpg" alt=""> -->
+        <div class="homePageImg"></div>
         <div class="nav">
             <h3>Erin</h3>
             <div class="navButtons">
@@ -30,16 +31,16 @@
     <div id="about">
         <!-- <img src="http://i67.tinypic.com/1o0upf.jpg" alt=""> -->
         <div class="blogs">
-            <div onclick="showAbout()">
+            <div>
                 <img src="http://i67.tinypic.com/2cekeab.jpg" alt="About Me" />
                 <h2>About Me</h2>
             </div>
-            <div onclick="show()">
+            <div>
                 <img src="http://i65.tinypic.com/t7l7gz.jpg" alt="Web Development" />
                 <h2>My Journey
                     <br/> to Web Development</h2>
             </div>
-            <div onClick="showWork()">
+            <div>
                 <img src="http://i64.tinypic.com/s5cz1c.jpg" alt="work" />
                 <h2>Work Experience</h2>
             </div>
@@ -132,6 +133,7 @@
 <script>
 import Vue from 'vue';
 import VueScrollTo from 'vue-scrollto';
+// import router from '../Router.vue';
 Vue.use(VueScrollTo);
 // import Icon from 'vue-awesome/components/Icon';
 
@@ -139,21 +141,21 @@ export default {
   name: "Home",
   // components: Icon,
   mounted () {
-    let scrollpos = window.scrollY;
-    const header = document.querySelector("nav");
-    // const header_height = header.offsetHeight;
+    // let scrollpos = window.scrollY;
+    // const header = document.querySelector("nav");
+    // // const header_height = header.offsetHeight;
 
-    const add_class_on_scroll = () => header.classList.add("showNav");
-    const remove_class_on_scroll = () => header.classList.remove("showNav");
+    // const add_class_on_scroll = () => header.classList.add("showNav");
+    // const remove_class_on_scroll = () => header.classList.remove("showNav");
 
-    window.addEventListener('scroll', function() {
-      scrollpos = window.scrollY;
-      if (scrollpos >= 200) {
-        add_class_on_scroll();
-      } else {
-        remove_class_on_scroll();
-      }
-    });
+    // window.addEventListener('scroll', function() {
+    //   scrollpos = window.scrollY;
+    //   if (scrollpos >= 200) {
+    //     add_class_on_scroll();
+    //   } else {
+    //     remove_class_on_scroll();
+    //   }
+    // });
   }
 };
 </script>
@@ -172,6 +174,11 @@ dark blue = 076982*/
   v2.0 | 20110126
   License: none (public domain)
 */
+/* * {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+} */
 
 html,
 body,
@@ -277,6 +284,7 @@ section {
 }
 body {
   line-height: 1;
+  width: 100vw;
 }
 ol,
 ul {
@@ -311,7 +319,6 @@ input {
 
 body {
   scroll-y: hidden;
-  margin: 0;
 }
 
 p {
@@ -320,10 +327,13 @@ p {
 }
 
 .homePageImg {
-  height: 100vh;
+  height: 100%;
   margin: 0px;
+  padding: 0px;
   position: fixed;
   width: 100vw;
+  background-image: url("http://i67.tinypic.com/4uymbs.jpg");
+  background-size: cover;
   z-index: -2;
 }
 

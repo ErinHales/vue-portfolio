@@ -19,7 +19,16 @@
 </div>
 </template>
 
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
 <script>
+export default {
+    name: "Journey",
+    mounted() {
+        console.log("Journey component mounted successfully");
+    }
+}
 </script>
 
 <style>

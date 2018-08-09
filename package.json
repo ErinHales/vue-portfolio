@@ -11,6 +11,7 @@
     "bezier-easing": "^2.1.0",
     "vue": "^2.5.17",
     "vue-awesome": "^3.1.0",
+    "vue-router": "^3.0.1",
     "vue-scrollto": "^2.11.0"
   },
   "devDependencies": {
